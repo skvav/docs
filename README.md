@@ -1,5 +1,5 @@
 # Прослушка трафика мобильного приложения
-Для написания плагина для банка, у которого отсутствует общедоступное открытое API, можно попытаться использовать API мобильного приложения банка. Есть два способа, как можно узнать его устройство.
+Для написания плагина для банка, у которого отсутствует общедоступное открытое API, можно попытаться использовать API мобильного приложения банка. Есть два способа как можно узнать его устройство:
 - Прослушать трафик мобильного приложения
 - Дизассемлировать мобильное приложение
 
@@ -64,7 +64,7 @@ adb install "<path to apk file>"
 ```
 cd "C:\Users\<your user>\AppData\Local\Android\Sdk\platform-tools"
 adb root
-adb push "C:\Users\<your user>\.mitmproxy\mitmproxy-ca-cert.cer"/data/local/tmp/cert-der.crt
+adb push "C:\Users\<your user>\.mitmproxy\mitmproxy-ca-cert.cer" /data/local/tmp/cert-der.crt
 adb push "<path to uncompressed frida-server-android file>" /data/local/tmp/frida-server
 adb shell "chmod 755 /data/local/tmp/frida-server" 
 ```
